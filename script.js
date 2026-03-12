@@ -31,6 +31,7 @@ function isiFilter(){
     isiSelect("sekolah", sekolahSet);
     isiSelect("kelas", kelasSet);
     isiSelect("mapel", mapelSet);
+    isiSelect("tahun_ajaran", tahunAjaranSet);
     isiSelect("tahun", tahunSet);
 }
 
@@ -38,6 +39,8 @@ function isiFilter(){
 function isiSelect(id, dataSet){
 
     const select = document.getElementById(id);
+
+    if(!select) return;
 
     dataSet.forEach(v=>{
         const option = document.createElement("option");
@@ -55,6 +58,7 @@ function cari(){
     const sekolah = document.getElementById("sekolah").value;
     const kelas = document.getElementById("kelas").value;
     const mapel = document.getElementById("mapel").value;
+    const tahun_ajaran = document.getElementById("tahun_ajaran").value;
     const tahun = document.getElementById("tahun").value;
 
     const hasil = dataAlumni.filter(a => {
@@ -64,6 +68,7 @@ function cari(){
             (sekolah === "" || a.sekolah === sekolah) &&
             (kelas === "" || a.kelas === kelas) &&
             (mapel === "" || a.mapel === mapel) &&
+            (tahun_ajaran === "" || a.tahun_ajaran === tahun_ajaran) &&
             (tahun === "" || a.tahun === tahun)
         );
 
