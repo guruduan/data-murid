@@ -18,12 +18,14 @@ function isiFilter(){
     const kelasSet = new Set();
     const mapelSet = new Set();
     const tahunSet = new Set();
+    const tahunAjaranSet = new Set();
 
     dataAlumni.forEach(a=>{
         sekolahSet.add(a.sekolah);
         kelasSet.add(a.kelas);
         mapelSet.add(a.mapel);
         tahunSet.add(a.tahun);
+        tahunAjaranSet.add(a.tahun_ajaran);
     });
 
     isiSelect("sekolah", sekolahSet);
@@ -91,7 +93,7 @@ html+=`
 Sekolah : ${a.sekolah}<br>
 Kelas : ${a.kelas}<br>
 Ngajar Mapel : ${a.mapel}<br>
-Di Tahun Ajaran : ${a.tahun_ajaran}<br>
+Tahun Ajaran : ${a.tahun_ajaran}<br>
 Alumni Tahun : ${a.tahun}<br><br>
 
 <button onclick="lihatTeman('${a.sekolah}','${a.kelas}','${a.mapel}','${a.tahun}')">
@@ -132,7 +134,7 @@ html+=`
 Sekolah : ${a.sekolah}<br>
 Kelas : ${a.kelas}<br>
 Ngajar Mapel : ${a.mapel}<br>
-Di Tahun Ajaran : ${a.tahun_ajaran}<br>
+Tahun Ajaran : ${a.tahun_ajaran}<br>
 Alumni Tahun : ${a.tahun}
 </div>
 `
