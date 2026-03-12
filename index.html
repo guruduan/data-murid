@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cari Murid</title>
+
+<style>
+body{
+font-family:Arial;
+text-align:center;
+margin-top:50px;
+}
+
+input,select{
+padding:8px;
+margin:5px;
+}
+
+button{
+padding:8px 15px;
+}
+
+.result{
+margin-top:30px;
+}
+.card{
+border:1px solid #ccc;
+padding:10px;
+margin:10px;
+border-radius:6px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h2>Daftar Murid yang Pernah Ku Ajar selama jadi Guru</h2>
+
+<input type="text" id="nama" placeholder="Ketik nama alumni..." oninput="cari()">
+
+<select id="sekolah" onchange="cari()">
+<option value="">Di Sekolah</option>
+</select>
+
+<select id="kelas" onchange="cari()">
+<option value="">Di Kelas</option>
+</select>
+
+<select id="mapel" onchange="cari()">
+<option value="">Ngajar Mapel</option>
+</select>
+
+<select id="tahun" onchange="cari()">
+<option value="">Alumni Tahun</option>
+</select>
+
+<br>
+
+
+<div class="result" id="result"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
