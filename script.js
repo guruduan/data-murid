@@ -31,7 +31,7 @@ function isiFilter(){
     isiSelect("sekolah", sekolahSet);
     isiSelect("kelas", kelasSet);
     isiSelect("mapel", mapelSet);
-    isiSelect("tahun_ajaran", tahunAjaranSet);
+    isiSelect("tahun_ajaran", Array.from(tahunAjaranSet).sort());
     isiSelect("tahun", tahunSet);
 }
 
